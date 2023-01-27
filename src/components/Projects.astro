@@ -1,14 +1,12 @@
 ---
 import Project from "../components/Project.astro"
-import pixe from "../../public/images/pixe.png"
-import hb from "../../public/images/hb.png"
 const data = [
     {
         "id": 1,
         "name": "Kaizen-shop",
         "desc": "an e-commerce created in React js",
         "link": "https://kaizen-shop.onrender.com/",
-        "img": pixe,
+        "img": "../../public/images/kaizen.jpg",
         "languages": ["fa-brands fa-react","fa-brands fa-node-js"]
     },
     {
@@ -16,7 +14,7 @@ const data = [
         "name": "Pixe",
         "desc": "a pixe.la cli created in python",
         "link": "https://github.com/medragneel/Pixe",
-        "img": "../../public/images/pixe.png",
+        "img":  "../../public/images/pixe.png",
         "languages":["fa-brands fa-python","fa-solid fa-terminal"]
     },
     {
@@ -24,7 +22,7 @@ const data = [
         "name": "Svg Birthday Cake Animation",
         "desc": "A Happy Birthday Cake Animation with Gsap Html Css ",
         "link": "https://medmhb.netlify.app/",
-        "img": hb,
+        "img": "../../public/images/hb.png",
         "languages":["fa-brands fa-html5","fa-brands fa-css3-alt","fa-brands fa-js"]
     },
     {
@@ -32,8 +30,16 @@ const data = [
         "name": "A Portfolio Website",
         "desc": "a static website using html,css",
         "link": "https://mahdjoubesma.github.io/cv/",
-        "img": pixe,
+        "img": "../../public/images/wd2.png",
         "languages":["fa-brands fa-html5","fa-brands fa-css3-alt"]
+    },
+    {
+        "id": 5,
+        "name": "pmTimer",
+        "desc": "a pomodoro timer using html css js",
+        "link": "https://pmtimer.netlify.app/",
+        "img": "../../public/images/PmTimer.png",
+        "languages":["fa-brands fa-html5","fa-brands fa-css3-alt","fa-brands fa-js"]
     },
 ]
 
@@ -41,6 +47,7 @@ const data = [
 
 <section class="work">
 <div class="pr">
-{data.map((dt)=> <Project img={data.img} name={dt.name} desc={dt.desc} link={dt.link} languages={dt.languages} /> )}
+<>
+{data.map((dt)=> <Project image={dt.img} name={dt.name} desc={dt.desc} link={dt.link} languages={dt.languages} /> )}
 </div>
 </section>
