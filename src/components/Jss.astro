@@ -1,0 +1,54 @@
+---
+---
+
+<script>
+let loader=document.querySelector(".loader");
+let logo=document.querySelector(".logo");
+let header= document.querySelector("#header")
+setInterval(function(){
+    loader.style.display ="none";
+    header.style.display= "none";
+    logo.style.display="none";
+},1500)
+let cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", e=>{
+    cursor.setAttribute("style", "top: "+e.pageY +"px; left: "+e.pageX+"px")
+})
+let ls= document.querySelectorAll(".ls");
+let item = document.querySelectorAll(".item");
+
+for(let i=0; i< ls.length;i++){
+    ls[i].addEventListener("click", function(){
+        for(let j=0 ;j <ls.length;j++){
+            ls[j].classList.remove('active');
+        }
+        this.classList.add('active');
+        let df= this.getAttribute('data-filter');
+            for( let k=0; k< item.length; k++){
+                item[k].classList.remove('active');
+                item[k].classList.add('hide');
+                if(item[k].getAttribute('data-item') == df || df == "all"){
+                    item[k].classList.remove('hide');
+                    item[k].classList.add('active');
+                }
+
+
+
+            }
+    })
+}
+const hamburger = document.querySelector(".h");
+const navLinks = document.querySelector(".nav");
+const links = document.querySelectorAll(".nav li");
+hamburger.addEventListener('click', ()=>{
+    //Animate Links
+     navLinks.classList.toggle("open");
+     links.forEach(link => {
+         link.classList.toggle("fade");
+     });
+ 
+     //Hamburger Animation
+     hamburger.classList.toggle("toggle");
+ });
+
+</script>

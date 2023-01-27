@@ -1,0 +1,40 @@
+---
+import wd1 from "../../public/images/wd1.png"
+import wd2 from "../../public/images/wd2.png"
+import gd1 from "../../public/images/gd1.jpg"
+import gd2 from "../../public/images/gd2.jpg"
+import gd3 from "../../public/images/gd3.jpg"
+import gd4 from "../../public/images/gd4.jpg"
+console.log(wd1)
+---
+
+ <section id="portfolio" class="portfolio">
+                <div class="ctg">
+                    <ul>
+                        <li data-filter="all" class="ls active">All</li>
+                        <li data-filter="gd" class="ls">Graphic Design</li>
+                        <li data-filter="wd" class="ls">Web Design</li>
+                    </ul>
+                    <div class="g">
+                        <div data-item="gd" class="item">
+                            <img src={gd1}>
+                        </div>
+                        <div data-item="gd" class="item">
+                            <img src={gd2}>
+                        </div>
+                        <div data-item="gd" class="item">
+                            <img src={gd3}>
+                        </div>
+                        <div data-item="gd" class="item">
+                            <img src={gd4}>
+                        </div>
+                        <div data-item="wd" class="item">
+                            <img src={wd1}>
+                        </div>
+                        <div data-item="wd" class="item">
+                            <img src={wd2}>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>

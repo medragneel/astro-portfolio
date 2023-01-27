@@ -1,0 +1,32 @@
+---
+import Nav from "../components/Nav.astro"
+import Loader from "../components/Loader.astro"
+import Projects from "../components/Projects.astro"
+import Jss from "../components/Jss.astro"
+import Gallery from "../components/Gallery.astro"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <link rel="stylesheet" href="../../public/styles/styles.css" media="all">
+		<title>Astro</title>
+	</head>
+	<body>
+    <div class="cursor"></div>
+    <div class="container">
+    <Loader/>
+    <div class="main">
+    <Nav />
+    <Gallery />
+     <h1 class="tlt">Projects</h1>
+    <Projects />
+    </div>
+    </div>
+    <Jss />
+    <script src="https://kit.fontawesome.com/dffcb81fbc.js" crossorigin="anonymous"></script>
+	</body>
+</html>
